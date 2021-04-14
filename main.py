@@ -61,7 +61,7 @@ async def on_message(message):
 					await message.channel.send(f'roll (difficulty {c}) -> {n} ({s})')
 					if n == 1:
 								await message.channel.send('CRITICAL!!! ;(')
-					if n == 20:
+					elif n == 20:
 						await message.channel.send('CRITICAL!!! :)')
 					break
 					
@@ -84,6 +84,7 @@ async def on_message(message):
 					for k, v in init1.items():
 						z += 1
 						await message.channel.send(f'{z:>2}º{k:^9}-{v:>4}')
+                    break
 
 
 client.run(os.getenv('TOKEN'))
